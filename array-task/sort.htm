@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body { font-size: 2em;}
+        span { display: block;}
+    </style>
+</head>
+<body>
+    <span id="sort"></span>
+    <span id="funk"></span>
+    <script>
+        const sort = document.querySelector("#sort")
+        const funk = document.querySelector("#funk")
+        const arr = [-4, -3, 1, 2, 3, 5, 6, 7, 8]
+        let kod = ''
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = 0; j < arr.length; j++) {
+                if (arr[i] < arr[j]) {
+                    let rep = arr[i]
+                    arr[i] = arr[j]
+                    arr[j] = rep
+                }
+                
+            }
+            
+        }
+        sort.innerHTML = `Sort method : ${arr.sort((a,b) => a - b)}` 
+        funk.innerHTML = `Our function : ${arr}`
+    </script>
+</body>
+</html>

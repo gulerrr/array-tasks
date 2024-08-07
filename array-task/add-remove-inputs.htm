@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div { margin-top: 3vh;}
+        input { display: block; margin: 20px 0;}
+        button {
+            background: #990011;
+            border: none;
+            color: #FCF6F5;
+            width: 50px;
+            height: 50px;
+            border-radius: 10px;
+            font-size: 2em;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="add()">+</button>
+    <button onclick="del()">-</button>
+    <div></div>
+
+    <script>
+        const div = document.querySelector("div")
+        function add() {
+            div.innerHTML += `<input type="text" placeholder="Xezer" />`
+        }
+        function del() {
+            const lastInp = document.querySelector("input:last-child")
+            lastInp.remove()
+        }
+    </script>
+</body>
+</html>
